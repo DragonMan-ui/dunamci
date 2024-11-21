@@ -1,0 +1,116 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('images/6143177_3143855.jpg') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #49002a;
+  text-align: center;
+  position: relative;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.navbar .nav-links li {
+  margin: 0 15px;
+}
+
+.navbar .nav-links a {
+  color: #ff0090;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Add spacing between elements */
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+}
+
+.hero-content .btn {
+  padding: 10px 20px;
+  background: #ff0090;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* About Section */
+.about {
+  padding: 100px 20px;
+  background: linear-gradient(rgb(255, 121, 219), rgb(255, 136, 247));
+  text-align: center;
+  color: #fff;
+}
+
+.about h2 {
+  margin-bottom: 1rem;
+}
+
+/* Services Section */
+.services {
+  padding: 100px 20px;
+  background: url('images/6143178_3142958.jpg') fixed center center/cover;
+  color: #fff;
+  text-align: center;
+}
+
+.service-card {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px auto;
+  width: 80%;
+  color: #fff;
+}
+
+.service-card h3 {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
