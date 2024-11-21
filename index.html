@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Parallax Website</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">DynamicSite</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h1 data-aos="fade-down">Welcome to Dynamic Web</h1>
+      <p data-aos="fade-up">Creating dynamic and stunning web experiences for you.</p>
+      <a href="#services" class="btn scroll-btn" data-aos="zoom-in">Explore More</a>
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <h2 data-aos="fade-right">About Us</h2>
+    <p data-aos="fade-left">We specialize in crafting interactive and visually stunning websites that captivate users.</p>
+  </section>
+
+  <section id="services" class="services">
+    <h2 data-aos="fade-up">Our Services</h2>
+    <div class="service-card" data-aos="flip-left">
+      <h3>Web Design</h3>
+      <p>Stunning and responsive designs tailored to your needs.</p>
+    </div>
+    <div class="service-card" data-aos="flip-right">
+      <h3>Development</h3>
+      <p>Fast, secure, and scalable websites to grow your business.</p>
+    </div>
+    <div class="service-card" data-aos="flip-left">
+      <h3>Animation</h3>
+      <p>Engaging animations to bring your ideas to life.</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>© 2024 DynamicSite. All rights reserved.</p>
+  </footer>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    // Initialize AOS animations
+    AOS.init({
+      duration: 1000,
+      once: false
+    });
+
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('.scroll-btn').forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetSection = document.querySelector(this.getAttribute('href'));
+        targetSection.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      });
+    });
+
+    // Enable smooth scrolling globally using CSS
+    document.documentElement.style.scrollBehavior = 'smooth';
+  </script>
+</body>
+</html>
